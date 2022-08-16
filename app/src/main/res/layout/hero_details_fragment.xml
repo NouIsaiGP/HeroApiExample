@@ -1,0 +1,424 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.view.HeroDetailsFragment">
+
+    <ImageView
+        android:id="@+id/ivDetails"
+        android:layout_width="120dp"
+        android:layout_height="140dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:src="@tools:sample/avatars" />
+
+    <TextView
+        android:id="@+id/tvDetails"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias=".5"
+        app:layout_constraintStart_toEndOf="@+id/ivDetails"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:text="@tools:sample/full_names" />
+
+    <com.github.mikephil.charting.charts.HorizontalBarChart
+        android:id="@+id/barChart"
+        android:layout_width="291dp"
+        android:layout_height="112dp"
+        android:clickable="false"
+        android:focusable="false"
+        app:layout_constraintStart_toEndOf="@+id/ivDetails"
+        app:layout_constraintTop_toBottomOf="@+id/tvDetails" />
+
+    <TextView
+        android:id="@+id/tvBiografia"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="8dp"
+        android:text="@string/biografia"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias=".5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/barChart" />
+
+    <TextView
+        android:id="@+id/tvName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:textSize="8sp"
+        app:layout_constraintStart_toEndOf="@+id/txtName"
+        app:layout_constraintTop_toBottomOf="@+id/tvBiografia"
+        tools:text="@tools:sample/full_names" />
+
+    <TextView
+        android:id="@+id/txtName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:text="Nombre: "
+        android:textSize="8sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvBiografia" />
+
+    <TextView
+        android:id="@+id/tvAlter"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="8sp"
+        app:layout_constraintStart_toEndOf="@+id/txtAlter"
+        app:layout_constraintTop_toBottomOf="@+id/tvName"
+        tools:text="@tools:sample/full_names" />
+
+    <TextView
+        android:id="@+id/txtAlter"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Alter Egos: "
+        android:textSize="8sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txtName" />
+
+    <TextView
+        android:id="@+id/tvAlias"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="8sp"
+        app:layout_constraintStart_toEndOf="@+id/txtAlias"
+        app:layout_constraintTop_toBottomOf="@+id/tvAlter"
+        tools:text="@tools:sample/full_names" />
+
+    <TextView
+        android:id="@+id/txtAlias"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Alias: "
+        android:textSize="8sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txtAlter" />
+
+    <TextView
+        android:id="@+id/tvNacimiento"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="8sp"
+        app:layout_constraintStart_toEndOf="@+id/txtNacimiento"
+        app:layout_constraintTop_toBottomOf="@+id/tvAlias"
+        tools:text="@tools:sample/full_names" />
+
+    <TextView
+        android:id="@+id/txtNacimiento"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Nacio en: "
+        android:textSize="8sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txtAlias" />
+
+    <TextView
+        android:id="@+id/tvAparicion"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="8sp"
+        app:layout_constraintStart_toEndOf="@+id/txtAparicion"
+        app:layout_constraintTop_toBottomOf="@+id/tvNacimiento"
+        tools:text="@tools:sample/full_names" />
+
+    <TextView
+        android:id="@+id/txtAparicion"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Primera aparicion: "
+        android:textSize="8sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txtNacimiento" />
+
+    <TextView
+        android:id="@+id/tvPublisher"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="8sp"
+        app:layout_constraintStart_toEndOf="@+id/txtPubliser"
+        app:layout_constraintTop_toBottomOf="@+id/tvAparicion"
+        tools:text="@tools:sample/full_names" />
+
+    <TextView
+        android:id="@+id/txtPubliser"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Editora: "
+        android:textSize="8sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txtAparicion" />
+
+    <TextView
+        android:id="@+id/tvTeam"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="8sp"
+        app:layout_constraintStart_toEndOf="@+id/txtTeam"
+        app:layout_constraintTop_toBottomOf="@+id/tvPublisher"
+        tools:text="@tools:sample/full_names" />
+
+    <TextView
+        android:id="@+id/txtTeam"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Equipo: "
+        android:textSize="8sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txtPubliser" />
+
+
+    <TextView
+        android:id="@+id/tvAparencia"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:text="@string/aparencia"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvPublisher" />
+
+    <TextView
+        android:id="@+id/txtSexo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:text="Sexo: "
+        android:textSize="8sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvAparencia" />
+
+    <TextView
+        android:id="@+id/tvSexo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:textSize="8sp"
+        app:layout_constraintStart_toEndOf="@+id/txtSexo"
+        app:layout_constraintTop_toBottomOf="@+id/tvAparencia"
+        tools:text="@tools:sample/full_names" />
+
+    <TextView
+        android:id="@+id/txtAltura"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Altura: "
+        android:textSize="8sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txtSexo" />
+
+    <TextView
+        android:id="@+id/tvAltura"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="8sp"
+        app:layout_constraintStart_toEndOf="@+id/txtAltura"
+        app:layout_constraintTop_toBottomOf="@+id/tvSexo"
+        tools:text="@tools:sample/full_names" />
+
+    <TextView
+        android:id="@+id/txtOjos"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Color de ojos: "
+        android:textSize="8sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txtAltura" />
+
+    <TextView
+        android:id="@+id/tvOjos"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="8sp"
+        app:layout_constraintStart_toEndOf="@+id/txtOjos"
+        app:layout_constraintTop_toBottomOf="@id/tvAltura"
+        tools:text="@tools:sample/first_names" />
+
+    <TextView
+        android:id="@+id/txtRaza"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:text="Raza: "
+        android:textSize="8sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="@+id/guideline6"
+        app:layout_constraintTop_toBottomOf="@+id/tvAparencia" />
+
+    <TextView
+        android:id="@+id/tvRaza"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:textSize="8sp"
+        app:layout_constraintStart_toEndOf="@+id/txtRaza"
+        app:layout_constraintTop_toBottomOf="@+id/tvAparencia"
+        tools:text="@tools:sample/full_names" />
+
+
+    <TextView
+        android:id="@+id/txtPeso"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Peso: "
+        android:textSize="8sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="@+id/guideline6"
+        app:layout_constraintTop_toBottomOf="@+id/txtRaza" />
+
+    <TextView
+        android:id="@+id/tvPeso"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="8sp"
+        app:layout_constraintStart_toEndOf="@+id/txtPeso"
+        app:layout_constraintTop_toBottomOf="@+id/tvRaza"
+        tools:text="@tools:sample/full_names" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline6"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_begin="194dp"
+        app:layout_constraintVertical_bias=".5" />
+
+    <TextView
+        android:id="@+id/txtPelo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Color de pelo: "
+        android:textSize="8sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="@+id/guideline6"
+        app:layout_constraintTop_toBottomOf="@id/txtPeso" />
+
+    <TextView
+        android:id="@+id/tvPelo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="8sp"
+        app:layout_constraintStart_toEndOf="@+id/txtPelo"
+        app:layout_constraintTop_toBottomOf="@id/tvPeso"
+        tools:text="@tools:sample/first_names" />
+
+    <TextView
+        android:id="@+id/tvTrabajo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:text="Trabajo"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias=".5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txtPelo" />
+
+    <TextView
+        android:id="@+id/txtWork"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:text="Trabajo y base: "
+        android:textSize="8sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvTrabajo" />
+
+    <TextView
+        android:id="@+id/tvWork"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:textSize="8sp"
+        app:layout_constraintStart_toEndOf="@+id/txtWork"
+        app:layout_constraintTop_toBottomOf="@+id/tvTrabajo"
+        tools:text="@tools:sample/first_names" />
+
+    <TextView
+        android:id="@+id/tvConexiones"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:text="Conexiones"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvWork" />
+
+    <TextView
+        android:id="@+id/txtGroup"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:text="Grupo: "
+        android:textSize="8sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvConexiones" />
+
+    <TextView
+        android:id="@+id/tvGroup"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:textSize="8sp"
+        app:layout_constraintStart_toEndOf="@+id/txtGroup"
+        app:layout_constraintTop_toBottomOf="@+id/tvConexiones"
+        tools:text="@tools:sample/first_names" />
+
+    <TextView
+        android:id="@+id/txtRelatives"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Familiares: "
+        android:textSize="8sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/txtGroup" />
+
+    <TextView
+        android:id="@+id/tvRelatives"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="8sp"
+        app:layout_constraintStart_toEndOf="@+id/txtRelatives"
+        app:layout_constraintTop_toBottomOf="@id/tvGroup"
+        tools:text="@tools:sample/first_names" />
+
+    <Button
+        android:id="@+id/button"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"
+        android:text="Regresar"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvRelatives" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
